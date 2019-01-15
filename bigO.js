@@ -356,7 +356,7 @@ function fibonacci(n) {
   return fibonacci(n - 1) + fibonacci(n - 2);	
 }
 
-
+// O(n)
 
 
 /*=================================================================================
@@ -375,7 +375,9 @@ Continue this way until you find all the anagrams for east. There should be 24 o
 Input: 
 Output: 
 
-*/
+*/ 
+
+
 
 function anagrams(prefix, str){
   if(str.length <= 1){
@@ -394,7 +396,10 @@ function printAnagram(word){
   anagrams(' ', word);
 
 }
-
+// a,b => 2
+// a,b,c => 6
+// a,b,c,d => 24
+// O(n^2)
 /* ==============================
 Exercise 10: Animal Hierarchy
 Step through the code and find the input to the program, input to each recursive calls, 
@@ -420,6 +425,9 @@ function traverse(animalHierarchy, parent) {
     .forEach(item => node[item.id] = traverse(animalHierarchy, item.id));
   return node;  
 }
+
+// O(log n)
+
 
 
 /*=================================================================================*/
